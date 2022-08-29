@@ -3,16 +3,16 @@ describe "Artist" do
     Artist.new(name: 'Justice', genre: 'Electronic', age: Time.now.strftime("%Y").to_i - 2003, hometown: "Paris")
   end
 
-  it "can instantiate a new instance" do
-    expect(Artist.new.is_a?(Object)).to eq(true)
-  end
+  # it "can instantiate a new instance" do
+  #   expect(Artist.new.is_a?(Object)).to eq(true)
+  # end
 
-  it "can instantiate with a name, genre, age and hometown" do
-    expect(artist.name).to eq("Justice")
-    expect(artist.genre).to eq("Electronic")
-    expect(artist.age).to eq(Time.now.strftime("%Y").to_i - 2003)
-    expect(artist.hometown).to eq("Paris")
-  end
+  # it "can instantiate with a name, genre, age and hometown" do
+  #   expect(artist.name).to eq("Justice")
+  #   expect(artist.genre).to eq("Electronic")
+  #   expect(artist.age).to eq(Time.now.strftime("%Y").to_i - 2003)
+  #   expect(artist.hometown).to eq("Paris")
+  # end
 
   it "can be saved to the database" do
     artist.genre = "Electronic"
@@ -38,7 +38,7 @@ describe "Artist" do
     expect(Artist.column_names).not_to include("favorite_food")
   end
 
-  it "can migrate to have a favorite_flower attribute for Artist" do    
-    expect(Artist.column_names).to include("favorite_flower")
-  end
+  # it "can migrate to have a favorite_flower attribute for Artist" do    
+  #   expect(Artist.column_names).to include("favorite_flower")
+  # end
 end
